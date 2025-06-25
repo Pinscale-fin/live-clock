@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live Clock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #007BFF;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  🕒 Current Time: <span id="clock"></span>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("clock").innerText = now.toLocaleString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+</html>
